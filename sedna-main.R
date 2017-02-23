@@ -13,6 +13,7 @@ library(phytools)
 library(spatstat)
 library(parallel)
 
+
 setwd("/work/cryomics/reference_dbs/SILVA/sedna")
 silva.acc_taxid <- read.table("./../tax_slv_ssu_123.acc_taxid",row.names=1, stringsAsFactors=FALSE)
 silva.acc_taxid[,2] <- sapply(rownames(silva.acc_taxid),function(x) strsplit(x,"[.]")[[1]][1])
